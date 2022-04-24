@@ -16,3 +16,22 @@
     preview.style.display = "block";
         }
      }
+    
+   const form=document.querySelector('form');
+    form.addEventListener('submit',async (e)=>{
+      e.preventDefault()
+      const amount=form.amount.value
+
+      try {
+        const res=await fetch("/index.html",{
+           method:'POST',
+            headers:{'Content-Type':'application/json'},
+             body:JSON.stringify({amount})
+
+
+         })
+                console.log(res.body);
+      } catch (error) {
+                console.log(error);
+  }
+})
