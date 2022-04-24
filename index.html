@@ -20,7 +20,7 @@
   <div class="container">
     <div class="screen">
       <div class="screen-header" style="align-items: center;">
-        <P style="color: rgb(68, 209, 179);"><a href="./signup.html">MAKE PAYMENT</a></P>
+        <P style="color: rgb(68, 209, 179);"><p>MAKE PAYMENT</p>>
       </div>
       <div class="screen-body">
         <div class="screen-body-item left">
@@ -32,17 +32,6 @@
                 <img id="file-ip-1-preview" width="200em" height="150em">
               </div>
             </div>
-
-            <script type="text/javascript">
-              function showPreview(event) {
-                if (event.target.files.length > 0) {
-                  var src = URL.createObjectURL(event.target.files[0]);
-                  var preview = document.getElementById("file-ip-1-preview");
-                  preview.src = src;
-                  preview.style.display = "block";
-                }
-              }
-            </script>
           </div>
           <label for="file-ip-1" class="btnbl">Upload</label>
           <input style="display: none;" type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
@@ -61,7 +50,14 @@
             </div>
 
             <div class="app-form-group buttons">
-              <button class="app-form-button">MAKE PAYMENT</button>
+              <!-- <button class="app-form-button">MAKE PAYMENT</button> -->
+                <form>
+                  <label for="amount">amount: </label>
+                  <input type="text" placeholder="Enter amount" name="amount" id="amount">
+                
+                  <button>make payment</button>
+                
+                </form>
             </div>
           </div>
         </div>
@@ -74,5 +70,6 @@
     <script src="./index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script src="./index2.js"></script>
 </body>
 </html> 
