@@ -8,15 +8,11 @@
         nav.classList.remove("sticky");
       }
     }
-    var button = document.getElementById("mpesaButton");
-
-<function(d, s, id) {
-    let js, mpesa = d.getElementByTagName(s)[0];
-    if (d.getElementById(id)) {return;}
-
-    
-}
-
-
-
-
+ function showPreview(event) {
+    if (event.target.files.length > 0) {
+    var src = URL.createObjectURL(event.target.files[0]);
+    var preview = document.getElementById("file-ip-1-preview");
+    preview.src = src;
+    preview.style.display = "block";
+        }
+     }
